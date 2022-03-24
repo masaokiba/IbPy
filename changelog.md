@@ -1,3 +1,6 @@
+# v0.8.1
+* Fixed syntax error in Python3
+
 # v0.8.0
 
 * Some internal reorganization

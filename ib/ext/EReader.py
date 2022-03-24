@@ -5,6 +5,7 @@
 # This file copyright Troy Melhase, troy@gci.net.
 #
 # WARNING: all changes to this file will be lost.
+import ctypes
 
 from ib.lib import Boolean, Double, DataInputStream, Integer, Long, StringBuffer, Thread
 from ib.lib.overloading import overloaded
@@ -918,7 +919,7 @@ class EReader(Thread):
     def readLong(self):
         """ generated source for method readLong """
         strval = self.readStr()
-        return 0l if strval is None else Long.parseLong(strval)
+        return ctypes.c_long(0) if strval is None else Long.parseLong(strval)
 
     def readDouble(self):
         """ generated source for method readDouble """
