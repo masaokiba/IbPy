@@ -83,7 +83,7 @@ def gen_tick_id():
         yield i
         i += 1
 if sys.version_info[0] < 3:
-    gen_tick_id = gen_tick_id().next
+    gen_tick_id = gen_tick_id().__next__
 else:
     gen_tick_id = gen_tick_id().__next__
 
@@ -402,7 +402,7 @@ def main(options):
             print('\n%s (%s of %s):' % (msg_typename, msg_showmax, len(msgs), ))
             for msg in msgs[0:msg_showmax]:
                 print(formatter(msg))
-        else:
+    else:
             if msg_typename in [k.typeName for k in list(rec_msgs.keys())]:
                 print('\n%s (%s):' % (msg_typename, 0, ))
             else:

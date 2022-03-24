@@ -38,10 +38,10 @@ outputSubs += [
     (r'EOL = \[0\]', r'EOL = 0'),
     (r'(, "" \+ e)', r', str(e)'),
 
-    (r'print "Server Version:" \+ self\.m_serverVersion',
+    (r'print("Server Version:" \+ self\.m_serverVersion'),
      r'debug("Server Version:  %s", self.m_serverVersion)',),
 
-    (r'print "TWS Time at connection:" \+ self\.m_TwsTime',
+    (r'print("TWS Time at connection:" \+ self\.m_TwsTime'),
      r'debug("TWS Time at connection:  %s", self.m_TwsTime)',),
 
     (r'        return strval is None or len\(\(strval\) == 0\)',
